@@ -14,7 +14,7 @@ def videodownload(playlistLink):
         playlist = Playlist(playlistLink)
         if len(playlist.video_urls) == 0:
             print("Please enter a valid link")
-            videodownload()
+            
         CHECK_FOLDER = os.path.isdir("./Videos")
         if not CHECK_FOLDER:
             os.mkdir("./Videos")
@@ -33,7 +33,7 @@ def videodownload(playlistLink):
             print(download_folder, " Already exist!")
             print("Try Again")
             time.sleep(1)
-            videodownload()
+            
 
         print("Total Video Count: ", len(playlist.video_urls))    
 
@@ -60,7 +60,7 @@ def videodownload(playlistLink):
         time.sleep(1)
     else:
         print("Please enter a valid link")
-        videodownload()
+        
 
     
 
@@ -70,7 +70,7 @@ def audiodownload(playlistLink):
         playlist = Playlist(playlistLink)
         if len(playlist.video_urls) == 0:
             print("Please enter a valid link")
-            audiodownload()
+            
         CHECK_FOLDER = os.path.isdir("./Songs")
         if not CHECK_FOLDER:
             os.mkdir("./Songs")
@@ -88,8 +88,7 @@ def audiodownload(playlistLink):
             print(download_folder, " Already exist!")
             print("Try Again")
             time.sleep(1)
-            audiodownload()
-
+            
         print("Total Video Count: ", len(playlist.video_urls))    
 
         print("\n\n Youtube Songs Link\n")
@@ -124,4 +123,4 @@ def audiodownload(playlistLink):
         
     else:
         print("Please enter a valid link")
-        audiodownload()
+        
