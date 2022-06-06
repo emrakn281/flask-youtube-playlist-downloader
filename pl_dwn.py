@@ -1,14 +1,9 @@
-from distutils.archive_util import make_archive
-from email.mime import audio
-import ipaddress
-from pydoc import importfile
+
 import time
-from flask import send_file
 from pytube import Playlist
 from moviepy.editor import *
-import os,sys
+import os
 import shutil
-import app
 import socket
 hostname=socket.gethostname()
 ip=socket.gethostbyname(hostname)

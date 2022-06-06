@@ -1,13 +1,6 @@
-from argparse import FileType
-from importlib.resources import path
-from itertools import count
-from tabnanny import check
-from telnetlib import TTYLOC
-from turtle import title
 from flask import Flask, render_template,Response, request, redirect, url_for, flash, jsonify,send_file
 import pl_dwn
 from pytube import Playlist
-import time
 import socket
 hostname=socket.gethostname()
 ip=socket.gethostbyname(hostname)
